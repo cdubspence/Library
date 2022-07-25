@@ -21,10 +21,11 @@ function addBook() {
 function openForm() {
     form.style.visibility = 'visible';
     container.style.backgroundColor = '#000';
-    container.style.opacity = '.2';
+    container.style.opacity = '.5';
 }
 
 function closeForm() {
     form.style.visibility = 'hidden';
     container.style.opacity = '1';
+    container.style.backgroundColor = 'white';
 }
