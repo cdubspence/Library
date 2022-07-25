@@ -1,7 +1,7 @@
-//this is a basic constructor for creating a libary of books!
-const div = document.querySelector('.container');
-const library = []
-const newDiv = document.createElement('div')
+const form = document.getElementById('myForm');
+const div = document.createElement('div');
+const container = document.querySelector('.container');
+
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -16,7 +16,15 @@ function addBook() {
     book.author = document.getElementById('author').value;
     book.pages = document.getElementById('pages').value;
 
-    console.log(book)
-    newDiv.innerHTML += `<h1>${book.title}</h1> <p> ${book.author}, ${book.pages}</p>`
-    div.append(newDiv)
+}
+
+function openForm() {
+    form.style.visibility = 'visible';
+    container.style.backgroundColor = '#000';
+    container.style.opacity = '.2';
+}
+
+function closeForm() {
+    form.style.visibility = 'hidden';
+    container.style.opacity = '1';
 }
