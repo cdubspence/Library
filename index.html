@@ -13,11 +13,11 @@
             <h1>My Library</h1>
             <button class="open-form" onclick="openForm()">Add Book</button>
         </div>
-        <div class="library">
+        <div id='library' class="library">
             
             <div class="card">
                 <div class="cardContent">
-                    <h1 class="title">Hobbit</h1>
+                    <h1 class="title">The Hobbit</h1>
                     <p class="author">Author: JRR Tolkien</p>
                     <p class="pages">Pages: 500</p>
                     <h2 class="completedText">READ</h2>
@@ -30,8 +30,8 @@
             Title: <input id='title' type='text' required>
             Author: <input id='author' type='text' required>
             Pages: <input id='pages' type='text' required>
-            <button type="button" onclick="closeForm()">Close</button>
-            <button type="submit" onclick='addBook()'>
+            <button type="button" id="closeBtn" onclick="closeForm()">Close</button>
+            <button type="submit" id="addBtn" onclick='addBook()'>
             Submit
             </button>
         </div>

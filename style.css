@@ -7,7 +7,7 @@ body {
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-    background-color: white;
+    background-color: rgb(180, 25, 46);
     opacity: 1;
 }
 
@@ -16,6 +16,20 @@ body {
     grid-column: 1 / 4;
     background-color: whitesmoke;
     text-align: center;
+}
+
+.header > button {
+    background-color: rgb(180, 25, 46);
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 20px;
+}
+
+.header > button:hover {
+    color:rgb(180, 25, 46);
+    background-color: white;
+    cursor: pointer;
+    font-size: 1.7rem;
 }
 
 .library {
@@ -29,7 +43,7 @@ body {
 .card {
     height: 200px;
     width: 250px;
-    background-color: aqua;
+    background-color: whitesmoke;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2px 3px;
@@ -53,7 +67,7 @@ body {
     border-radius: 20px;
     background-color: white;
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 40%;
     visibility: hidden;
     text-align: center;
