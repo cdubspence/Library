@@ -1,7 +1,8 @@
 const form = document.getElementById('myForm');
 const container = document.querySelector('.container');
 const library = document.querySelector('.library');
-
+let bookId = 0;
+const books = [];
 
 function Book(title, author, pages) {
   this.title = title;
@@ -17,6 +18,8 @@ function addBook() {
 
     let card = document.createElement('div');
     card.className = 'card';
+    bookId += 1;
+    card.dataset.id = bookId;
 
     //Create card content with user input
     let cardContent = document.createElement('div');
@@ -25,6 +28,8 @@ function addBook() {
     //Update DOM and return CSS style
     card.appendChild(cardContent);
     library.append(card);
+    books.push(card);
+    console.log(books)
     form.style.visibility = 'hidden';
     container.style.opacity = '1';
     container.style.backgroundColor = 'rgb(180, 25, 46)';
