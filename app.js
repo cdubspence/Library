@@ -1,10 +1,9 @@
 const form = document.getElementById('myForm');
-const div = document.createElement('div');
 const container = document.querySelector('.container');
-const library = document.getElementById('library');
+const library = document.querySelector('.library');
 
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages) {
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -19,15 +18,21 @@ function addBook() {
     let card = document.createElement('div');
     card.className = 'card';
 
+    //Create card content with user input
     let cardContent = document.createElement('div');
     cardContent.className = 'cardContent';
-    cardContent.innerHTML = `<h1> ${book.title} </h1>`,
-                            `<p> ${book.author}</p>`,
-                            `<p> ${book.pages}</p>`
-
+    cardContent.innerHTML = `<h1> ${book.title} </h1><p>Author: ${book.author}</p><p>Pages: ${book.pages}</p>`
+    //Update DOM and return CSS style
     card.appendChild(cardContent);
     library.append(card);
+    form.style.visibility = 'hidden';
+    container.style.opacity = '1';
+    container.style.backgroundColor = 'rgb(180, 25, 46)';
 
+}
+
+function removeBook() {
+    
 }
 
 function openForm() {
