@@ -69,8 +69,15 @@ div.bookCard > * {
     text-align: center;
 }
 
-button {
+.bookCard > button {
     border-radius: 15px;
+    border: 1px solid whitesmoke;
+    position: relative;
+}
+
+.bookCard > button:hover {
+    cursor: pointer;
+    top: -1%
 }
 
 #deleteBtn {
