@@ -48,7 +48,7 @@ body {
     overflow: scroll;
 }
 
-.card {
+.bookCard {
     height: 270px;
     width: 300px;
     background-color: whitesmoke;
@@ -56,21 +56,21 @@ body {
     border-radius: 10px;
     box-shadow: 2px 3px;
     grid-column: auto;
+    overflow-y: auto;
 }
 
-.cardContent {
+div.bookCard > * {
     padding: 10px;
 }
 
-.cardContent > h2 {
+.bookCard > h1 {
     text-decoration: underline;
     text-align: center;
 }
 
-#removeBtn {
+#deleteBtn {
     color: red;
     margin-left: 110px;
-    margin-top: 30px;
 }
 
 #myForm {
