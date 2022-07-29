@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Library</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Library</h1>
+            <button class="open-form" onclick="openForm()">Add Book</button>
+        </div>
+        <div class="library">
+            
+            <div class="card" data-id="0">
+                <div class="cardContent">
+                    <h1 class="title">The Hobbit</h1>
+                    <p class="author">Author: JRR Tolkien</p>
+                    <p class="pages">Pages: 304</p>
+                    Read: <input id="read" type="checkbox" checked><br>
+                    <button id="removeBtn" data-id="0" onclick="removeBook()">Delete</button>
+                </div>
+                
+            </div>
+        </div> 
+    </div>
+    <form id="myForm">
+        <div class="formInfo">
+            Title: <input id='title' type='text' required>
+            Author: <input id='author' type='text' required>
+            Pages: <input id='pages' type='text' required>
+            <button type="button" id="closeBtn" onclick="closeForm()">X</button>
+            <!-- Must have return false or form will submit preventing the DOM update -->
+            <button id="addBtn" onclick='addBook(); return false'>
+            Submit
+            </button>
+        </div>
+      </form>
+    
+    
+      
+        
+       
+
+    <script src="app.js"></script>
+</body>
+</html>
