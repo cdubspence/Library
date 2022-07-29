@@ -1,4 +1,10 @@
-const library = [];
+const library = [
+    {
+        title: 'The Hobbit',
+        author: "J.R.R Tolkien",
+        pages: '304'
+    },
+];
 const lib = document.querySelector('.library');
 const container = document.querySelector('.container');
 const form = document.getElementById('myForm');
@@ -26,15 +32,16 @@ function getBook() {
 function addBook() {
     lib.innerHTML = '';
         library.forEach(book => {
-        const card = document.createElement('div');
-        card.setAttribute('name', book.title);
-            card.innerHTML = `<h1>${book.title}</h1>
-            <p>Author: ${book.author}</p>
-            <p>Pages: ${book.pages}</p>
-        <button id='deleteBtn' onclick='deleteBook(this)'>Delete</button>`;
-        card.className = 'bookCard';
-        card.setAttribute('id', book.id)
-        lib.append(card);
+            const card = document.createElement('div');
+            card.setAttribute('name', book.title);
+                card.innerHTML = `<h1>${book.title}</h1>
+                <p>Author: ${book.author}</p>
+                <p>Pages: ${book.pages}</p>
+                <button id='readStatus' onclick='readStatus()'>Read</button>
+                <button id='deleteBtn' onclick='deleteBook(this)'>Delete</button>`;
+            card.className = 'bookCard';
+            card.setAttribute('id', book.id)
+            lib.append(card);
         })
     closeForm()
 }
@@ -65,3 +72,18 @@ function closeForm() {
     container.style.backgroundColor = 'rgb(180, 25, 46)';
     clearForm();
 }
+
+function readStatus() {
+    const readBtn = document.getElementById('readStatus');
+    if(readBtn.textContent == 'Read') {
+        readBtn.style.background = 'red';
+        readBtn.textContent = 'Not Read'
+    }
+    else {
+        readBtn.style.background = 'rgb(110, 223, 110)';
+        readBtn.textContent = 'Read'
+    }
+    
+}
+
+addBook();

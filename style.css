@@ -57,6 +57,7 @@ body {
     box-shadow: 2px 3px;
     grid-column: auto;
     overflow-y: auto;
+    display: block;
 }
 
 div.bookCard > * {
@@ -68,9 +69,19 @@ div.bookCard > * {
     text-align: center;
 }
 
+button {
+    border-radius: 15px;
+}
+
 #deleteBtn {
     color: red;
     margin-left: 110px;
+}
+
+#readStatus {
+    background-color: rgb(110, 223, 110);
+    color: white;
+    margin-left: 10px;
 }
 
 #myForm {
