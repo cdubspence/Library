@@ -2,14 +2,13 @@ const library = [
     {
         title: 'The Hobbit',
         author: "J.R.R Tolkien",
-        pages: '304'
+        pages: '304',
     },
 ];
 const lib = document.querySelector('.library');
 const container = document.querySelector('.container');
 const form = document.getElementById('myForm');
 let bookId = 0;
-//const card = document.createElement('div');
 
 function Book(title, author, pages) {
 	this.title = title;
@@ -37,7 +36,7 @@ function addBook() {
                 card.innerHTML = `<h1>${book.title}</h1>
                 <p>Author: ${book.author}</p>
                 <p>Pages: ${book.pages}</p>
-                <button id='readStatus' onclick='readStatus()'>Read</button>
+                <button id='readStatus' onclick='readStatus(this)'>Read</button>
                 <button id='deleteBtn' onclick='deleteBook(this)'>Delete</button>`;
             card.className = 'bookCard';
             card.setAttribute('id', book.id)
@@ -73,8 +72,7 @@ function closeForm() {
     clearForm();
 }
 
-function readStatus() {
-    const readBtn = document.getElementById('readStatus');
+function readStatus(readBtn) {
     if(readBtn.textContent == 'Read') {
         readBtn.style.background = 'red';
         readBtn.textContent = 'Not Read'
